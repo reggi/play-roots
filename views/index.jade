@@ -1,6 +1,9 @@
 extends layout
 
 block content
-  h3 Welcome to roots!
+  h3 Sick Blog Bro
   :markdown
     Find tutorials and documentation at http://roots.cx : )
+
+  each post in site.blog
+    li: a(href="#{post._url}")= post.title
